@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Tilt+Neon&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.center {
+  filter: brightness(50%);
+  background-image: url("images/pexels-iván-rivero-1001965.jpg");
+  background-color: aqua;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+}
