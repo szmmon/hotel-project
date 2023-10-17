@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Tilt+Neon&display=swap");
+html {
+  background-color: #79ac78;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +10,83 @@
   font-family: "Poppins", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#brand-name {
+  font-size: 1.5em;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  background: transparent;
+  color: inherit;
+  font-size: 1.4em;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  transform: translateX(-70%);
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  background-color: #79ac78;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #9bd643;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  color: #9bd643;
+  transition: 0.1s all ease;
+}
+
+#navbar {
+  height: 4em;
+  position: fixed;
+  top: 0;
+  background-color: #79ac78;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px 10px 50px;
+  transition: 0.4s all ease-in;
+}
+
+#navbar.scrolled {
+  background-color: transparent;
+  color: #79ac78;
+}
+
 .center {
+  margin-top: 4em;
   filter: brightness(50%);
   background-image: url("images/pexels-iván-rivero-1001965.jpg");
   background-color: aqua;
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 90vh;
+  height: 200vh;
 }
