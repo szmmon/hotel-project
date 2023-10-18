@@ -6,13 +6,16 @@ document.addEventListener("scroll", () => {
 })
 
 const changeBackground = () => {
-  const section = document.querySelector(".center")
+  const section = document.querySelector(".sec1-background")
   const images = [
-    "url(images/pexels-deeana-arts-2565222.jpg)",
-    "url(images/pexels-iván-rivero-1001965.jpg)",
-    "url(images/hotel-website/images/pexels-los-muertos-crew-7603330.jpg)",
+    "url(images/bg1.jpg)",
+    "url(images/bg2.jpg)",
+    "url(images/bg3.jpg)",
+    "url(images/bg4.jpg)",
+    "url(images/bg5.jpg)",
   ]
   const background = images[Math.floor(Math.random() * images.length)]
-  section.computedStyleMap.backgroundImage = background
+
+  section.style.backgroundImage = background
 }
-setInterval(changeBackground, 100)
+setInterval(changeBackground, 8000)
