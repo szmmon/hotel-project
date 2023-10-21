@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Tilt+Neon&display=swap");
 html {
   background-color: #79ac78;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -14,10 +15,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-#brand-name {
-  font-size: 1.5em;
-  font-weight: 500;
-}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -72,7 +70,6 @@ a {
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px 30px 10px 50px;
   transition: 1s all ease-in;
 }
@@ -82,16 +79,31 @@ a {
   background-color: #79ac78;
   color: #edf1d6;
 }
+#brand-name {
+  flex-basis: 100%;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+#nav-book-stay {
+  flex-basis: 40%;
+  font-size: 1.15em;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
 .sec1-background {
   filter: brightness(50%);
   background-image: url("images/bg1.jpg");
-  background-color: aqua;
+  background-color: #79ac78;
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 100vh;
   transition: all 5s;
+  aspect-ratio: 16/9;
 
   animation-name: animate;
   animation-direction: alternate-reverse;
@@ -122,7 +134,7 @@ a {
 
 .sec2 {
   color: #edf1d6;
-  margin: 6em 0em 2em 2em;
+  margin: 6em 0em 2em 0em;
   height: 140vh;
   min-width: 30vh;
   background-color: #79ac78;
@@ -176,9 +188,10 @@ a {
 }
 
 .sec3 {
+  margin-top: 8em;
   display: flex;
   padding: 0.5em 1.5em;
-  height: 100vh;
+  min-height: 100vh;
   color: #edf1d6;
 }
 .sec3 div {
@@ -205,7 +218,7 @@ a {
 .sec3 button {
   font-size: 1.2em;
   background-color: #79ac78;
-  border: #edf1d6 2px solid;
+  border: #edf1d6 3px solid;
   border-radius: 8px;
   padding: 3px 5px;
   color: #edf1d6;
@@ -215,4 +228,142 @@ a {
 .sec3 button:hover {
   background-color: #862b0d;
   border-color: #862b0d;
+}
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  filter: blur(5px);
+  transition: all 2s ease-in-out;
+}
+.hidden2 {
+  opacity: 0;
+  transform: translateX(100%);
+  filter: blur(5px);
+  transition: all 2s ease-in-out;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.sec3-content:nth-child(2) {
+  transition-delay: 300ms;
+}
+.sec3-content:nth-child(3) {
+  transition-delay: 500ms;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.popup {
+  font-size: 0.9em;
+  position: fixed;
+  width: 55%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 1.5em;
+  padding: 20px;
+  border-radius: 30px;
+  opacity: 0;
+  transition: 0.5s all ease;
+}
+.popup.menu {
+  background: rgb(24, 58, 29);
+  background: linear-gradient(
+    63deg,
+    rgba(24, 58, 29, 1) 30%,
+    rgba(240, 160, 75, 1) 73%
+  );
+}
+.popup.cocktail {
+  background: rgb(24, 58, 29);
+  background: linear-gradient(
+    218deg,
+    rgba(24, 58, 29, 1) 24%,
+    rgba(172, 68, 37, 1) 87%
+  );
+}
+.popup h3,
+.popup span {
+  align-self: flex-start;
+}
+.popup h2 {
+  padding: 0;
+}
+.popup i {
+  font-size: 2rem;
+  margin: 0 0 0 90%;
+  cursor: pointer;
+}
+
+.visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.sec4-opinions {
+  margin: 0em 0.5em 4em 2em;
+  display: flex;
+  flex-direction: row;
+  font-weight: 200;
+  color: #edf1d6;
+  font-size: 0.9em;
+  align-items: center;
+  justify-content: space-between;
+}
+.lux-lifestyle-mag,
+.best-hotel-reviews,
+.hotels-mag {
+  margin: 0px 5px 0px 5px;
+  padding: 5px;
+  border: #edf1d6 3px solid;
+  border-radius: 8px;
+}
+
+p.sig {
+  align-self: flex-end;
+  font-weight: 400;
+}
+
+footer {
+  padding-top: 3em;
+  background-color: #99a98f;
+  color: #edf1d6;
+  min-height: 35vh;
+  display: flex;
+  justify-content: space-around;
+}
+footer h2 {
+  font-size: 1.15em;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+footer .links {
+  display: flex;
+  flex-direction: column;
+}
+footer .contact {
+  display: flex;
+  flex-direction: column;
+}
+footer .contact i {
+  padding-right: 5px;
+  font-size: 1.15em;
+}
+.socials {
+  margin-top: 0.25em;
+  font-size: 1.4em;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }

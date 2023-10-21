@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel website</title>
     <link rel="stylesheet" href="styles.css" />
-    
+
   </head>
   <body>
-  
+  <div id="top-page"></div>
     <nav id="navbar">
-      <a href="index.html" id="brand-name">Sage Hotel</a>
+      <p id="brand-name"class="close-popup"><a href="#top-page" >Sage Hotel</a></p>
+      <p id="nav-book-stay" class="close-popup"><a href="#">BOOK YOUR STAY</a></p>
     <div class="dropdown">
-    <button class="dropbtn">
+    <button class="dropbtn close-popup">
         <i class="fa-solid fa-bars-staggered"></i>
         </button>
         <div class="dropdown-content">
-          <a href="#">BOOK YOUR STAY</a>
-          <a href="#">HOME</a>
-          <a href="#">ABOUT</a>
-          <a href="#">ROOMS</a></
+          <a href="#top-page">HOME</a>
+          <a href="#about-link">ABOUT</a>
+          <a href="#offer">OFFER</a>
         </div>
       </div>
     </nav>
 
   
     <div class="sec1-background"></div>
+
+    <div id="about-link"></div>
     <section class="sec2">
     <div class="info">
     <img class="side-image"src="images/sc2-2.jpg">
-    <h2 class="heading-info">Luxury Redefined: Your Home Away</h2>
+    <div class="hidden">
+    <h2 class="heading-info ">Luxury Redefined: Your Home Away</h2>
     <p>
     Welcome to our charming hotel, where comfort meets sophistication. Nestled in the heart of Chicago, our hotel offers a tranquil retreat for both business and leisure travelers. With a perfect blend of modern amenities and warm hospitality, you'll feel right at home from the moment you arrive. </p>
     <p>
@@ -45,44 +48,140 @@
     Conveniently located near popular attractions such as Willis Tower, our hotel is the perfect starting point for exploring the beauty of Chicago. Experience the perfect blend of luxury and convenience during your stay with us. We can't wait to welcome you to our hotel and make your visit a memorable one.
     </p>
     </div>
-    <div class="info-images">
+    </div>
+    <div class="info-images hidden2">
     <img src="images/sc2-1.jpg" id="img1">
     <img src="images/sc2-3.jpg" id="img2"></div>
     </section>
 
+    <div id="offer"></div>
     <section class="sec3">
-      <div class="eat">
+      <div class="popup menu">
+      <i class="fa-regular fa-circle-xmark close-popup" ></i>      
+      <h1>Hotel Sage Restaurant Menu</h1>
+      <h2>Appetizers</h2>
+      <h3>Classic Caprese Salad</h3>
+      <span>Vine-ripened tomatoes, fresh mozzarella, basil, balsamic glaze</span>
+      <h3>Crispy Calamari</h3>
+      <span>Tender calamari rings, served with marinara and lemon aioli.</span>
+      <h3>Mouthwatering Bruschetta</h3>
+      <span>Toasted baguette topped with diced tomatoes, basil, garlic, and balsamic reduction</span>
+
+      <h2>Soups and Salads</h2>
+      <h3>Creamy Tomato Basil Soup</h3>
+      <span>A comforting blend of ripe tomatoes and fresh basil</span>
+      <h3>Garden Fresh Spinach Salad</h3>
+      <span>Baby spinach, candied pecans, goat cheese, and raspberry vinaigrette.</span>
+      <h2>Main courses</h2>
+      <h3>Signature Filet Mignon</h3>
+      <span>A tender 8 oz. filet, cooked to perfection, served with garlic mashed potatoes and seasonal vegetables.</span>
+      <h3>Lemon Garlic Shrimp Linguine</h3>
+      <span>Succulent shrimp, linguine pasta, and a zesty lemon garlic cream sauce.</span>
+      <h3>Vegetarian Delight</h3>
+      <span>Chef's selection of grilled seasonal vegetables, quinoa, and a light herb vinaigrette.</span>
+      </div>
+
+      <div class="popup cocktail">
+      <i class="fa-regular fa-circle-xmark close-popup" ></i>     
+      <h1>Hotel Sage Cocktail Menu</h1>
+      <h2>Signature Cocktails</h2>
+      <h3>Sage Martini</h3>
+      <span>A unique martini crafted with premium gin, vermouth, and a touch of sage, garnished with a twist of lemon.</span>
+      <h3>Tropical Paradise</h3>
+      <span>A refreshing blend of coconut rum, pineapple juice, and a hint of grenadine, served over ice.</span>
+      <h3>Mango Tango</h3>
+      <span>A vibrant combination of mango vodka, orange liqueur, and fresh mango puree, garnished with a slice of mango.</span>
+
+      <h2>Classic Cocktails</h2>
+      <h3>Old Fashioned</h3>
+      <span>Bourbon whiskey muddled with sugar and bitters, garnished with an orange twist and a cherry.</span>
+      <h3>Margarita</h3>
+      <span>Tequila, triple sec, and fresh lime juice, served with a salted rim and a lime wedge.</span>
+      <h3>Mojito</h3>
+      <span>White rum, fresh mint, lime juice, sugar, and a splash of soda, served over ice.</span>
+
+      <h2>Non-Alcoholic Mocktails</h2>
+      <h3>Fruit Punch</h3>
+      <span>A fruity blend of pineapple, orange, and cranberry juices, with a hint of grenadine.</span>
+      <h3>Virgin Mojito</h3>
+      <span>Fresh mint, lime juice, and sugar, topped with soda and crushed ice</span>
+      
+      </div>
+
+      <div class="popup rooms visible">
+        <h1>Elegance, Comfort, and Dreams Await Here.</h1>
+        
+      </div>
+
+      <div class="sec3-content hidden">
       <h2>Indulge in Culinary Delights at Our Restaurant</h2>
       <p>Our hotel's restaurant is a culinary haven where flavors come to life. With a diverse menu inspired by local and international cuisine, we invite you to savor a delightful dining experience in an elegant and inviting atmosphere. Whether you're joining us for breakfast, lunch, or dinner, our talented chefs are dedicated to delivering a memorable gastronomic journey. From fresh, locally sourced ingredients to expertly crafted dishes, prepare your taste buds for a delectable adventure at our hotel restaurant.</p>
-      <button type="button"><a href="#">Explore our menu</a></button>
+      <button type="button"><span id="menu" class="open-popup">Explore our menu</span></button>
+    
       </div>
-      <div class="drink">
+      <div class="sec3-content hidden">
       <h2>Elevate Your Evening at Our Cocktail Bar</h2>
       <p>Step into a world of sophistication and savor the art of mixology at our hotel's cocktail bar. With a chic ambiance, an extensive selection of premium spirits, and a team of skilled bartenders, we're here to craft your perfect libation. Whether you're in the mood for a classic cocktail or a signature creation, our bar is your destination for an evening of delightful sips and socializing. Join us for a memorable night out and experience the pinnacle of cocktail craftsmanship at our hotel's cocktail bar.</p>
-      <button type="button"><a href="#">Explore our cocktail menu</a></button>
+      <button type="button"><span id="cocktail" class="open-popup">Explore our cocktail menu</span></button>
       </div>
-      <div class="rest">
+      <div class="sec3-content hidden">
       <h2>Unwind in Elegance: Your Tranquil Hotel Retreat</h2>
       <p>Discover the epitome of comfort and style in our hotel bedrooms. Each room is meticulously designed to create a serene oasis, where you can escape the hustle and bustle of the world. Sink into the embrace of our plush bedding, revel in modern amenities, and relish the tranquility of your private sanctuary.
       Whether you're here for business or leisure, our hotel bedrooms provide a welcoming haven for a restful night's sleep and a rejuvenating start to your day. With a harmonious blend of convenience and luxury, our rooms ensure your stay is nothing short of exceptional. Experience the ultimate in relaxation and comfort during your stay with us.</p>
-      <button type="button"><a href="#">Explore our rooms</a></button>
+      <button type="button"><span id="rooms" class="open-popup">Explore our rooms</span></button>
 </div>
     </section>
 
     <div class="sec4-opinions">
 
       <div class="lux-lifestyle-mag">
-      <div class="star-rating"></div>
-      <p> Sage Hotel is the epitome of luxury and class. From the elegant decor to the exquisite dining, this hotel is a haven of comfort and sophistication. Impeccable service, a central location, and attention to detail make it a must-visit. If you're looking for a memorable, top-tier experience, Sage Hotel is the answer.</p>
+        <div class="star-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p> 
+        Sage Hotel is the epitome of luxury and class. From the elegant decor to the exquisite dining, this hotel is a haven of comfort and sophistication. Impeccable service, a central location, and attention to detail make it a must-visit. If you're looking for a memorable, top-tier experience, Sage Hotel is the answer.
+        </p>
+        <p class="sig">~Luxury Lifestyle Magazine</p>
       </div>
 
       <div class="best-hotel-reviews">
-      <div class="star-rating"></div>
-      Discover the epitome of luxury and class at Hotel Sage, ideally located in Chicago. This hotel exudes elegance, boasts exquisite dining, and offers impeccable service that makes it a sanctuary of comfort and sophistication. It's a top-tier experience that immerses you in the essence of the Windy City. For an unforgettable stay, Hotel Sage is your go-to choice</div>
+        <div class="star-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+        <p>
+        Discover the epitome of luxury and class at Hotel Sage, ideally located in Chicago. This hotel exudes elegance, boasts exquisite dining, and offers impeccable service that makes it a sanctuary of comfort and sophistication. It's a top-tier experience that immerses you in the essence of the Windy City. For an unforgettable stay, Hotel Sage is your go-to choice
+        </p>
+        
+        <p class="sig">~Best Hotel Reviews</p>
+      </div>
+
+      <div class="hotels-mag">
+      <div class="star-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+
+      <p>
+      Hotel Sage stands as the epitome of luxury and sophistication. With its elegant decor, exceptional dining, and unwavering commitment to impeccable service, it offers a haven of comfort and class. This top-tier experience creates lasting memories, making Hotel Sage the ultimate choice for an extraordinary stay.
+      </p>
+      <p class="sig">~Hotels Magazine</p></div>
     </div>
-    <div class="hotels-mag">
-    <div class="star-rating"></div>
-    <p>Hotel Sage stands as the epitome of luxury and sophistication. With its elegant decor, exceptional dining, and unwavering commitment to impeccable service, it offers a haven of comfort and class. This top-tier experience creates lasting memories, making Hotel Sage the ultimate choice for an extraordinary stay.</p></div>
+
+    <footer>
+      <div class="links">
+      <h2>QUICK LINKS</h2>
+        <a href="">Explore</a>
+        <a href="">Sustainability</a>
+        <a href="">Blog</a>
+        <a href="">Reviews</a>
+        <a href="">Contact</a></div>
+        <div class="contact">
+
+
+        <h2>CONTACT US</h2>
+        <p></p>
+        <a href="https://maps.app.goo.gl/dq8mEYWDSMAs8PEi6"><i class="fa-solid fa-location-dot"></i>201 E Randolph St, Chicago, IL 60602</a></p>
+      <p><i class="fa-solid fa-phone"></i>+1 (312) 555-3890</p>
+      <div class="socials">
+        <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        <a href="facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="x.com"><i class="fa-brands fa-square-x-twitter"></i></a>
+        </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
     <script
