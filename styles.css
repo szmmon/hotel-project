@@ -289,6 +289,29 @@ a {
     rgba(172, 68, 37, 1) 87%
   );
 }
+.popup.rooms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: rgb(24, 58, 29);
+  background: linear-gradient(
+    307deg,
+    rgba(24, 58, 29, 1) 24%,
+    rgba(53, 87, 100, 1) 77%
+  );
+}
+.slide-element {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.slide-element span {
+  font-size: 0.8em;
+}
+.slide-element img {
+  max-width: 400px;
+}
+
 .popup h3,
 .popup span {
   align-self: flex-start;
@@ -296,7 +319,7 @@ a {
 .popup h2 {
   padding: 0;
 }
-.popup i {
+.popup i.close-popup {
   font-size: 2rem;
   margin: 0 0 0 90%;
   cursor: pointer;
