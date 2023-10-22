@@ -300,16 +300,37 @@ a {
     rgba(53, 87, 100, 1) 77%
   );
 }
-.slide-element {
+.slider-slides {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.slide-element span {
+.slider-slides span {
+  text-align: center;
   font-size: 0.8em;
 }
-.slide-element img {
-  max-width: 400px;
+
+.image-change {
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+  aspect-ratio: 16/9;
+  background-image: url(images/suite1.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: 0.5s all ease;
+}
+.image-changed {
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+  aspect-ratio: 16/9;
+  background-image: url(images/suite2.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: 0.5s all ease;
 }
 
 .popup h3,
