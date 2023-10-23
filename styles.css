@@ -194,7 +194,7 @@ a {
   min-height: 100vh;
   color: #edf1d6;
 }
-.sec3 div {
+.sec3 div:not(.slides) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -290,27 +290,43 @@ a {
   );
 }
 .popup.rooms {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  margin-top: 0;
+  margin-bottom: 2em;
   background: rgb(24, 58, 29);
   background: linear-gradient(
     307deg,
     rgba(24, 58, 29, 1) 24%,
     rgba(53, 87, 100, 1) 77%
   );
-}
-.slider-slides {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.slider-slides span {
-  text-align: center;
-  font-size: 0.8em;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  max-height: 90vh;
+  width: 90%;
+  overflow: hidden;
 }
 
-.image-change {
+.slides {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.one-slide {
+  grid-row: 1;
+  grid-column: 1;
+  opacity: 0;
+  z-index: 0;
+}
+.one-slide span.bedroom-info {
+  height: 90px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.one-slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.image-change-suite {
   margin: 0 auto;
   width: 400px;
   height: 300px;
@@ -321,12 +337,57 @@ a {
   opacity: 1;
   transition: 0.5s all ease;
 }
-.image-changed {
+.image-changed-suite {
   margin: 0 auto;
   width: 400px;
   height: 300px;
   aspect-ratio: 16/9;
   background-image: url(images/suite2.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: 0.5s all ease;
+}
+
+.image-change-jrsuite {
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+  aspect-ratio: 16/9;
+  background-image: url(images/jrsuite1.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: 0.5s all ease;
+}
+.image-changed-jrsuite {
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+  aspect-ratio: 16/9;
+  background-image: url(images/jrsuite2.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: 0.5s all ease;
+}
+.image-change-superior {
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+  aspect-ratio: 16/9;
+  background-image: url(images/superior1.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  transition: 0.5s all ease;
+}
+.image-changed-superior {
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+  aspect-ratio: 16/9;
+  background-image: url(images/superior2.jpg);
   background-position: center;
   background-size: cover;
   opacity: 1;
