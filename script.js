@@ -50,6 +50,8 @@ openPopupBtn.forEach((popup) => {
       cocktailsPopup.classList.add("visible")
     } else if (popup.id == "rooms") {
       roomsPopup.classList.add("visible")
+      const suite = document.querySelector(".suite")
+      suite.classList.add("is-active")
     }
   })
   const closeBtn = document.querySelectorAll(".close-popup")
@@ -138,3 +140,20 @@ const updateSlide = () => {
     }
   })
 }
+//datepicker
+const datepicker = function () {
+  $('input[name="daterange"]').daterangepicker(
+    {
+      opens: "left",
+    },
+    function (start, end, label) {
+      console.log(
+        "A new date selection was made: " +
+          start.format("YYYY-MM-DD") +
+          " to " +
+          end.format("YYYY-MM-DD")
+      )
+    }
+  )
+}
+datepicker()

@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel website</title>
     <link rel="stylesheet" href="styles.css" />
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   </head>
   <body>
   <div id="top-page"></div>
     <nav id="navbar">
       <p id="brand-name"class="close-popup"><a href="#top-page" >Sage Hotel</a></p>
-      <p id="nav-book-stay" class="close-popup"><a href="#">BOOK YOUR STAY</a></p>
+      <p id="nav-book-stay" class="close-popup"><a href="#offer">BOOK YOUR STAY</a></p>
     <div class="dropdown">
     <button class="dropbtn close-popup">
         <i class="fa-solid fa-bars-staggered"></i>
@@ -109,7 +112,7 @@
 
       <div class="popup rooms visible slider">
           <div class="slides">
-            <div class="one-slide suite">
+            <div class="one-slide suite is-active">
               <div class="naviagtion">
                   <i class="fa-regular fa-circle-left slide-prev popup-navi slider-btn"></i>
                   <i class="fa-regular fa-circle-xmark close-popup popup-navi" ></i>  
@@ -119,10 +122,18 @@
                 <p><i class="fa-solid fa-bed"></i> Double King sized bed</p>
                 <p><i class="fa-solid fa-person"></i> 1-2</p>
                 <span class="bedroom-info">Indulge in the utmost comfort and style within our spacious suite, designed for 1-2 guests. Featuring a luxurious queen-sized bed, this suite offers a perfect retreat for relaxation and tranquility. With tastefully appointed decor and modern amenities, it's an ideal choice for couples seeking a romantic escape or solo travelers in search of a serene haven. Make your stay memorable in a suite that redefines comfort and sophistication.</span>
-                <span class="image-change-suite"></span>
+                <div class="img-date">
+                  <span class="image-change-suite"></span>
+                  <div class="date-person">
+                  <span>
+                  <i class="fa-solid fa-person"></i>  <input type="number" name="people-count" min="1" max="2" >
+                  </span>
+                  <input type="text" name="daterange" value="01/01/2018 - 01/15/2018"/>
+                  </div>
+                </div>
             </div>
             
-            <div class="one-slide jrsuite is-active">
+            <div class="one-slide jrsuite">
               <div class="naviagtion">
                   <i class="fa-regular fa-circle-left slide-prev popup-navi slider-btn"></i>
                   <i class="fa-regular fa-circle-xmark close-popup popup-navi" ></i>  
@@ -132,7 +143,7 @@
               <p><i class="fa-solid fa-bed"></i> King sized bed</p>
               <p><i class="fa-solid fa-person"></i> 1</p>
               <span class="bedroom-info">
-Experience a blend of space and sophistication in our Junior Suite. Ideal for those seeking a little extra room to relax, these suites offer a separate living area and a comfortable sleeping space. Whether you're traveling for business or leisure, the Junior Suite provides the perfect combination of comfort and versatility. Discover a heightened level of convenience and style in our Junior Suite, where your comfort is our priority.</span>
+              Experience a blend of space and sophistication in our Junior Suite. Ideal for those seeking a little extra room to relax, these suites offer a separate living area and a comfortable sleeping space. Whether you're traveling for business or leisure, the Junior Suite provides the perfect combination of comfort and versatility. Discover a heightened level of convenience and style in our Junior Suite, where your comfort is our priority.</span>
               <span class="image-change-jrsuite"></span>
               </div>
 
@@ -147,6 +158,7 @@ Experience a blend of space and sophistication in our Junior Suite. Ideal for th
               <p><i class="fa-solid fa-person"></i> 1-2</p>
               <span class="bedroom-info">Our superior bedrooms offer an elevated level of comfort and style. Perfect for both business and leisure travelers, these well-appointed rooms provide a spacious and inviting retreat. With modern amenities and thoughtful touches, your stay in our superior bedroom will be nothing short of exceptional. Experience a superior level of comfort and relaxation during your visit.</span>
               <span class="image-change-superior"></span>
+              
               </div></div>                
           </div>
         
@@ -172,8 +184,8 @@ Experience a blend of space and sophistication in our Junior Suite. Ideal for th
 </div>
     </section>
 
+      <h2 id="opinions">REVIEWS</h2>
     <div class="sec4-opinions">
-
       <div class="lux-lifestyle-mag">
         <div class="star-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
         <p> 
@@ -228,5 +240,6 @@ Experience a blend of space and sophistication in our Junior Suite. Ideal for th
       src="https://kit.fontawesome.com/caa9c16cdf.js"
       crossorigin="anonymous"
     ></script>
+
   </body>
 </html>
