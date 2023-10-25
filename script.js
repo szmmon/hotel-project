@@ -81,46 +81,60 @@ const changeImgSuperior = () => {
 }
 setInterval(changeImgSuperior, 5000)
 
-// //slider for rooms in popup
-// class Slider {
-//   constructor() {
-//     this.slider = document.querySelector(".slider-slides") //element slider
-//     this.slides = [...this.slider.querySelectorAll(".slider-slide")]
-//     console.log(this.slides[0])
-//     this.currentSlide = Math.max(
-//       0,
-//       this.slides.findIndex((el) => el.classList.contains("is-active"))
-//     ) //current slide
-//     this.createPrevNext()
-//     this.setSlide(this.currentSlide)
-//   }
+//slides for popup rooms functionality
+let currentSlide = document.querySelector(".is-active")
+const allSLides = document.querySelectorAll(".one-slide")
+const nextBtn = document.querySelector(".slide-next")
+const prevBtn = document.querySelector(".slide-prev")
+const sliderBtns = document.querySelectorAll(".slider-btn")
+const allSlidesArr = [...allSLides]
+console.log(allSlidesArr)
+let i = 0
 
-//   createPrevNext() {
-//     this.btnNext = document.createElement("button")
-//     this.btnNext.type = "button"
-//     this.btnNext.innerText = "Next room"
-//     this.btnNext.classList.add("slider-button", "slider-button-next")
-//     this.btnNext.addEventListener("click", () => this.slideNext())
+for (i in allSlidesArr) {
+  if (allSlidesArr[i].classList.contains("is-active")) {
+    var currentSlideIndex = i
+    currentSlide = allSlidesArr[i]
+    // console.log(currentSlideIndex)
+    // console.log(currentSlide)
+  }
+}
 
-//     this.slider.append(this.btnNext)
-//   }
-//   slideNext() {
-//     this.currentSlide++
-//     if (this.currentSlide > this.slides.length - 1) {
-//       this.currentSlide = 0
-//     }
-//     this.setSlide(this.currentSlide)
-//   }
-//   setSlide(index) {
-//     //delete isActive class for every slide
-//     this.slides.forEach((slide) => {
-//       slide.classList.remove("is-active")
-//     })
-//     //add class to a chosen one
-//     this.slides[index].classList.add("is-active")
-//     //update current slide
-//     this.currentSlide = index
-//   }
-// }
-
-// const slider = new Slider("#mySlider")
+sliderBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (btn.classList.contains("slide-prev")) {
+      updateSlide()
+      if (currentSlideIndex != 0) {
+        currentSlideIndex--
+        currentSlide = allSlidesArr[currentSlideIndex]
+        // console.log(currentSlide)
+        currentSlide.classList.add("is-active")
+      } else {
+        currentSlideIndex = allSlidesArr.length - 1
+        currentSlide = allSlidesArr[currentSlideIndex]
+        // console.log(currentSlide)
+        currentSlide.classList.add("is-active")
+      }
+    } else if (btn.classList.contains("slide-next")) {
+      updateSlide()
+      if (currentSlideIndex < allSlidesArr.length - 1) {
+        currentSlideIndex++
+        currentSlide = allSlidesArr[currentSlideIndex]
+        // console.log(currentSlideIndex)
+        currentSlide.classList.add("is-active")
+      } else {
+        currentSlideIndex = 0
+        currentSlide = allSlidesArr[currentSlideIndex]
+        // console.log(currentSlideIndex)
+        currentSlide.classList.add("is-active")
+      }
+    }
+  })
+})
+const updateSlide = () => {
+  allSLides.forEach((slide) => {
+    if (slide.classList.contains("is-active")) {
+      slide.classList.remove("is-active")
+    }
+  })
+}

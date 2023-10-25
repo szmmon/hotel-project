@@ -194,7 +194,7 @@ a {
   min-height: 100vh;
   color: #edf1d6;
 }
-.sec3 div:not(.slides) {
+.sec3 div:not(.slides, .naviagtion) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -325,6 +325,14 @@ a {
   opacity: 1;
   z-index: 1;
 }
+.naviagtion {
+  padding: 0 10% 0 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
 
 .image-change-suite {
   margin: 0 auto;
@@ -401,9 +409,9 @@ a {
 .popup h2 {
   padding: 0;
 }
-.popup i.close-popup {
+.popup i.popup-navi {
   font-size: 2rem;
-  margin: 0 0 0 90%;
+  /* margin: 0 0 0 90%; */
   cursor: pointer;
 }
 
