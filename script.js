@@ -141,10 +141,13 @@ const updateSlide = () => {
   })
 }
 //datepicker
+
 const datepicker = function () {
   $('input[name="daterange"]').daterangepicker(
     {
       opens: "left",
+      startDate: `${moment().format("l")}`,
+      endDate: `${moment().add(12, "months").calendar()}`,
     },
     function (start, end, label) {
       console.log(
