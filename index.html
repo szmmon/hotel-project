@@ -118,21 +118,26 @@
                   <i class="fa-regular fa-circle-xmark close-popup popup-navi" ></i>  
                   <i class="fa-regular fa-circle-right slide-next popup-navi slider-btn" ></i>   
                 </div>
+                <div class="room-info">
                 <h1>Suite</h1>
                 <p><i class="fa-solid fa-bed"></i> Double King sized bed</p>
                 <p><i class="fa-solid fa-person"></i> 1-2</p>
                 <span class="bedroom-info">Indulge in the utmost comfort and style within our spacious suite, designed for 1-2 guests. Featuring a luxurious queen-sized bed, this suite offers a perfect retreat for relaxation and tranquility. With tastefully appointed decor and modern amenities, it's an ideal choice for couples seeking a romantic escape or solo travelers in search of a serene haven. Make your stay memorable in a suite that redefines comfort and sophistication.</span>
+                </div>
                 <div class="img-date">
                   <span class="image-change-suite"></span>
-                  <div class="date-person">
+                  <!-- <div class="date-person"> -->
+                  <form action="index.php" method="post" class="suite-form">
                   <span>
                   <i class="fa-solid fa-person"></i>  <input type="number" name="people-count" min="1" max="2" >
                   </span>
+                  <input type="text" name="reservation-name" placeholder="Input name for reservation"/>
                   <input type="text" name="daterange"/>
-                  </div>
+                  <input type="submit" value="Make reservation" name="reserve-btn">
+                  <!-- </div> -->
                 </div>
             </div>
-            
+            </form>
             <div class="one-slide jrsuite">
               <div class="naviagtion">
                   <i class="fa-regular fa-circle-left slide-prev popup-navi slider-btn"></i>

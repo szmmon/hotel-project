@@ -309,13 +309,21 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
+form.suite-form {
+  padding: 3% 10% 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 30px;
+}
+
 .one-slide {
   grid-row: 1;
   grid-column: 1;
   opacity: 0;
   z-index: 0;
 }
-.one-slide span.bedroom-info {
+span.bedroom-info {
   height: 90px;
   font-size: 0.8em;
   text-align: center;
@@ -431,7 +439,7 @@ a {
   align-content: center;
   gap: 30px;
 }
-.date-person span {
+form.suite-form {
   font-size: 1.4rem;
 }
 input[name="people-count"] {
@@ -444,14 +452,38 @@ input[name="people-count"] {
   cursor: pointer;
   padding: 3px;
 }
-input[name="daterange"] {
+input[name="daterange"],
+input[name="reservation-name"] {
   background: transparent;
   box-shadow: none;
   color: #edf1d6;
   border: 1px solid #edf1d6;
   padding: 3px;
   font-size: 1.2rem;
+  border-radius: 2px;
+  height: 2rem;
 }
+input[name="reservation-name"] {
+  font-size: 1.08rem;
+}
+
+input[name="reserve-btn"] {
+  background: transparent;
+  box-shadow: none;
+  color: #edf1d6;
+  border: 3px solid #edf1d6;
+  border-radius: 6px;
+  padding: 3px;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+  transition: all 0.3s ease-in-out;
+}
+input[name="reserve-btn"]:hover {
+  background: #862b0d;
+  border: 3px solid #862b0d;
+}
+
 .visible {
   opacity: 1;
   z-index: 1;
@@ -525,4 +557,16 @@ footer .contact i {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+@media only screen and (max-width: 1220px) {
+  .sec2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .sec2 {
+    font-size: 0.5rem;
+  }
 }
