@@ -53,7 +53,7 @@ openPopupBtn.forEach((popup) => {
       const suite = document.querySelector(".suite")
       suite.classList.add("is-active")
       var currentSlideIndex = 0
-      console.log(currentSlideIndex)
+      //console.log(currentSlideIndex)
     }
   })
   const closeBtn = document.querySelectorAll(".close-popup")
@@ -161,3 +161,5 @@ const datepicker = function () {
   )
 }
 datepicker()
+
+//after-booking window

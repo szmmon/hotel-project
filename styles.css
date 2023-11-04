@@ -194,7 +194,7 @@ a {
   min-height: 100vh;
   color: #edf1d6;
 }
-.sec3 div:not(.slides, .naviagtion, .img-date, .date-person) {
+.sec3 div:not(.slides, .naviagtion, .img-date, .date-person, .after-booking) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,6 +298,21 @@ a {
     rgba(24, 58, 29, 1) 24%,
     rgba(53, 87, 100, 1) 77%
   );
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  max-height: 90vh;
+  width: 90%;
+  overflow: hidden;
+}
+
+.popup#after-booking {
+  background: rgb(131, 39, 134);
+  background: linear-gradient(
+    14deg,
+    rgba(131, 39, 134, 1) 24%,
+    rgba(165, 195, 65, 1) 77%
+  );
+  margin-top: 0;
+  margin-bottom: 2em;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   max-height: 90vh;
   width: 90%;
