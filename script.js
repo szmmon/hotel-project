@@ -52,6 +52,8 @@ openPopupBtn.forEach((popup) => {
       roomsPopup.classList.add("visible")
       const suite = document.querySelector(".suite")
       suite.classList.add("is-active")
+      var currentSlideIndex = 0
+      console.log(currentSlideIndex)
     }
   })
   const closeBtn = document.querySelectorAll(".close-popup")
@@ -97,22 +99,22 @@ for (i in allSlidesArr) {
   if (allSlidesArr[i].classList.contains("is-active")) {
     var currentSlideIndex = i
     currentSlide = allSlidesArr[i]
-    // console.log(currentSlideIndex)
-    // console.log(currentSlide)
   }
 }
 
 sliderBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.classList.contains("slide-prev")) {
+      // console.log(currentSlideIndex)
       updateSlide()
+      currentSlideIndex--
+
       if (currentSlideIndex != 0) {
-        currentSlideIndex--
+        currentSlideIndex = allSlidesArr.length - 1
         currentSlide = allSlidesArr[currentSlideIndex]
         // console.log(currentSlide)
         currentSlide.classList.add("is-active")
       } else {
-        currentSlideIndex = allSlidesArr.length - 1
         currentSlide = allSlidesArr[currentSlideIndex]
         // console.log(currentSlide)
         currentSlide.classList.add("is-active")
@@ -122,12 +124,10 @@ sliderBtns.forEach((btn) => {
       if (currentSlideIndex < allSlidesArr.length - 1) {
         currentSlideIndex++
         currentSlide = allSlidesArr[currentSlideIndex]
-        // console.log(currentSlideIndex)
         currentSlide.classList.add("is-active")
       } else {
         currentSlideIndex = 0
         currentSlide = allSlidesArr[currentSlideIndex]
-        // console.log(currentSlideIndex)
         currentSlide.classList.add("is-active")
       }
     }
