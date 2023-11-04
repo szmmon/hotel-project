@@ -29,9 +29,11 @@ include("index.html");
         $people_count = $_POST["people-count"];
         $reservation_name = $_POST["reservation-name"];
         $daterange = $_POST["daterange"];
-
         $room = "suite";
-        
+
+        $reservation_name = preg_replace("/[^A-Za-z ]/", '', $reservation_name);
+
+
         $datestart = date_formating($daterange)[0];
         $dateend = date_formating($daterange)[1];
 
